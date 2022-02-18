@@ -1,4 +1,4 @@
-﻿namespace Kse.Algorithms.Samples
+﻿namespace Assignment_2
 {
     using System;
     using System.Collections.Generic;
@@ -12,7 +12,8 @@
             {
                 var newX = path[pathed].Column;
                 var newY = path[pathed].Row;
-                maze[newX, newY] = "🟢";
+                //maze[newX, newY] = "🟢";
+                maze[newX, newY] = "•";
             }
             
             maze[start.Column, start.Row] = "🏠";

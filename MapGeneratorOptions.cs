@@ -1,4 +1,4 @@
-﻿namespace Kse.Algorithms.Samples
+﻿namespace Assignment_2
 {
     public class MapGeneratorOptions
     {
