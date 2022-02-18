@@ -5,9 +5,19 @@
 
     public class MapPrinter
     {
-        public void Print(string[,] maze)
+        public void Print(string[,] maze, Point start, Point destination, List<Point> path)
         {
             PrintTopLine();
+            for (var pathed = 1; pathed <= path.Count - 1; pathed++)
+            {
+                var newX = path[pathed].Column;
+                var newY = path[pathed].Row;
+                maze[newX, newY] = "🟢";
+            }
+            
+            maze[start.Column, start.Row] = "🏠";
+            maze[destination.Column, destination.Row] = "🏁";
+            
             for (var row = 0; row < maze.GetLength(1); row++)
             {
                 Console.Write($"{row}\t");
